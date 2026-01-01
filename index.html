@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnitCalc - Maschenrechner</title>
+    <meta name="description" content="Einfacher Maschenproben-Umrechner für Strickerinnen und Stricker.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://fav.farm/🧶">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🧶 KnitCalc</h1>
+            <p class="subtitle">Maschen einfach umrechnen</p>
+        </header>
+
+        <main>
+            <!-- Gauge Settings -->
+            <section class="card">
+                <h2>📋 Maschenprobe (10x10cm)</h2>
+                <div class="gauge-grid">
+                    <div class="input-group">
+                        <label for="soll">Anleitung (Soll)</label>
+                        <input type="number" id="soll" placeholder="z.B. 20" min="1" step="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="ist">Gestrickt (Ist)</label>
+                        <input type="number" id="ist" placeholder="z.B. 22" min="1" step="1">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conversion Calculator -->
+            <section class="card">
+                <h2>🔢 Umrechnungen</h2>
+                <div class="conversion-list" id="conversionList">
+                    <!-- Javascript will generate rows here, but we will hardcode the structure for robustness/SEO access if JS fails (though this is an app)
+                         Actually, let's hardcode the inputs for simplicity and instant loading -->
+
+                    <div class="conversion-row-header"
+                        style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 8px; margin-bottom: 8px; font-size: 0.8rem; font-weight: bold; color: var(--color-secondary);">
+                        <span>Name (Optional)</span>
+                        <span>Soll-Maschen</span>
+                        <span>Dein Anschlag</span>
+                    </div>
+
+                    <!-- 10 Rows -->
+                    <!-- Row 1 -->
+                    <div class="conversion-row">
+                        <input type="text" placeholder="z.B. Bündchen" class="label-input">
+                        <input type="number" placeholder="0" class="source-input" min="0">
+                        <div class="result-display">-</div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="conversion-row">
+                        <input type="text" placeholder="Teil..." class="label-input">
+                        <input type="number" placeholder="0" class="source-input" min="0" step="1">
+                        <div class="result-display">-</div>
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="conversion-row">
+                        <input type="text" placeholder="Teil..." class="label-input">
+                        <input type="number" placeholder="0" class="source-input" min="0" step="1">
+                        <div class="result-display">-</div>
+                    </div>
+                    <!-- Row 4 -->
+                    <div class="conversion-row">
+                        <input type="text" placeholder="Teil..." class="label-input">
+                        <input type="number" placeholder="0" class="source-input" min="0" step="1">
+                        <div class="result-display">-</div>
+                    </div>
+                    <!-- Row 5 -->
+                    <div class="conversion-row">
+                        <input type="text" placeholder="Teil..." class="label-input">
+                        <input type="number" placeholder="0" class="source-input" min="0" step="1">
+                        <div class="result-display">-</div>
+                    </div>
+                    <!-- Row 6 -->
+                    <div class="conversion-row">
+                        <input type="text" placeholder="Teil..." class="label-input">
+                        <input type="number" placeholder="0" class="source-input" min="0" step="1">
+                        <div class="result-display">-</div>
+                    </div>
+                    <!-- Row 7 -->
+                    <div class="conversion-row">
+                        <input type="text" placeholder="Teil..." class="label-input">
+                        <input type="number" placeholder="0" class="source-input" min="0" step="1">
+                        <div class="result-display">-</div>
+                    </div>
+                    <!-- Row 8 -->
+                    <div class="conversion-row">
+                        <input type="text" placeholder="Teil..." class="label-input">
+                        <input type="number" placeholder="0" class="source-input" min="0" step="1">
+                        <div class="result-display">-</div>
+                    </div>
+                    <!-- Row 9 -->
+                    <div class="conversion-row">
+                        <input type="text" placeholder="Teil..." class="label-input">
+                        <input type="number" placeholder="0" class="source-input" min="0" step="1">
+                        <div class="result-display">-</div>
+                    </div>
+                    <!-- Row 10 -->
+                    <div class="conversion-row">
+                        <input type="text" placeholder="Teil..." class="label-input">
+                        <input type="number" placeholder="0" class="source-input" min="0" step="1">
+                        <div class="result-display">-</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <a href="impressum.html">Impressum & Datenschutz</a>
+            <br>
+            <span style="opacity: 0.7; font-size: 0.8em; margin-top: 8px; display: inline-block;">Made with ❤️ for
+                Knitters</span>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
